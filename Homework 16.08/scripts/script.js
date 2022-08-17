@@ -4,7 +4,7 @@
 
 for (let i = 100 ; i <= 130 ; i++) {
     console.log(i);
-}
+};
 
 
 // task №2
@@ -13,7 +13,7 @@ for (let i = 100 ; i <= 130 ; i++) {
 
 for (let i = 196 ; i >= 110 ; i -=3) {
     console.log(i);
-}
+};
 
 
 // task №3
@@ -21,10 +21,10 @@ for (let i = 196 ; i >= 110 ; i -=3) {
 // from 45 to 35 to the console.
 
 for (let i = 45 ; i >= 35 ; i--) {
-    if (i % 2 != 0) {
+    if (i % 2 !== 0) {
         console.log(i);
     }
-}
+};
 
 
 // task №4
@@ -47,7 +47,7 @@ let getSum = (n,m) => {
     console.log(sumOddNums);
 }
 
-(getSum(5,13));
+getSum(5,13);
 
 
 // task №5
@@ -57,9 +57,10 @@ let getSum = (n,m) => {
 // it to the console.
 
 let getSum2 = n => {
+    let sum = 0;
     for (let i = 1 ; i <= n ; i++) {
-        console.log(i);
+       sum += i
     }
+    console.log(sum);
 }
 getSum2(7);
-getSum2(15);
