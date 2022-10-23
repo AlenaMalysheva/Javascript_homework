@@ -15,16 +15,21 @@ const render = (json) => {
         const taskEl = document.createElement('p');
         const statusEl = document.createElement('p');
       
-        taskEl.innerText = `Task: ${title}` ;
-        statusEl.innerText =`Status: ${completed}` ;
+        // статус и цвет задачи в зависисмости от статуса
+        const status = completed ? 'done' : 'not done';
+        const background = completed ? 'green' : 'grey';
+        
+        // if(completed === true) {
+        //     card.style.backgroundColor = 'green';
+        // } else {
+        //     card.style.backgroundColor = 'grey';
+        // }
 
-        if(completed === true) {
-            card.style.backgroundColor = 'green';
-        } else {
-            card.style.backgroundColor = 'grey';
-        }
+        taskEl.innerText = `Task: ${title}` ;
+        statusEl.innerText =`Status: ${status}` ;
 
         card.classList.add('tasks')
+        card.style.backgroundColor = background;
 
         card.append(taskEl,statusEl);
         return card
